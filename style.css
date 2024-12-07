@@ -1,0 +1,203 @@
+/* 전체 기본 설정 */
+body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #FF3C00;
+    color: #000;
+  }
+  
+ /* 헤더 */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .box .image {
+    width: 100%; /* 부모(box) 너비에 맞게 */
+    height: 100%; /* 부모(box) 높이에 맞게 */
+    background-size: cover; /* 비율을 유지하며 박스에 꽉 차게 */
+    background-position: center; /* 이미지를 가운데 정렬 */
+    background-repeat: no-repeat; /* 반복 방지 */
+  }
+
+  .non-clickable a {
+    pointer-events: none; /* 클릭 비활성화 */
+    cursor: default; /* 기본 화살표 커서 */
+  }
+
+  header .header-content {
+    display: flex; /* 플렉스박스를 사용하여 요소를 한 줄로 정렬 */
+    align-items: center; /* 요소의 세로 방향 정렬 */
+    gap: 20px; /* 로고, 이미지, 텍스트 사이 간격 */
+  }
+  
+  header .logo-image {
+    position: absolute; /* 절대 위치 지정 */
+    top: 20px; /* 화면 상단에서 20px 떨어짐 */
+    left: 20px; /* 화면 왼쪽에서 20px 떨어짐 */
+    width: 200px; /* 로고 크기 조정 */
+    height: auto;
+  }
+  
+  header .image-container {
+    display: flex;
+    gap: 10px; /* 두 이미지 사이의 간격 */
+  }
+  
+  header .extra-image {
+    width: 17%; /* 이미지 크기를 원래 비율의 30%로 설정 */
+    height: auto; /* 비율 유지 */
+  }
+  
+  header .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header .description {
+    position: absolute; /* 절대 위치 지정 */
+    top: 30px; /* 화면 상단에서 20px 떨어짐 */
+    right: 30px; /* 화면 오른쪽에서 20px 떨어짐 */
+    text-align: right; /* 텍스트 오른쪽 정렬 */
+    font-size: 16px;
+    line-height: 1.5; /* 행간 설정 */
+    max-width: 600px; /* 텍스트 영역의 최대 너비를 늘림 */
+    word-wrap: break-word; /* 텍스트가 화면 밖으로 나가지 않도록 설정 */
+  }
+  
+  
+  /* 메뉴 */
+  nav.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    margin-top: 5px;
+  }
+  
+  nav.menu .marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+  
+  nav.menu a {
+    margin: 0 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    line-height: 50px; /* 메뉴 높이와 동일한 값으로 텍스트를 아래로 내림 */
+    display: inline-block; /* line-height 적용을 위해 block 또는 inline-block 설정 */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* 갤러리 */
+  main.gallery {
+    padding: 50px 20px;
+  }
+  
+  main.gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 14px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  main.gallery .box .image {
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    aspect-ratio: 892 / 619;
+  }
+  
+  main.gallery .box .text {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  main.gallery .box .title {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Helvetica', sans-serif; /* Helvetica Bold 적용 */
+    margin-bottom: 2px; /* Title과 297*420 간격 줄이기 */
+  }
+  
+  main.gallery .box .size {
+    font-size: 12px;
+    font-family: 'Helvetica', sans-serif; /* Helvetica 적용 */
+    font-style: italic; /* 기울임체 적용 (oblique 대신 italic 사용) */
+  }
+  
+  
+  /* 푸터 */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FF3C00;
+    color: #fff;
+  }
+  
+  footer .footer-menu {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    gap: 20px; /* 두 항목 사이 간격 */
+    margin-bottom: 10px;
+    padding-left: 20px; /* 왼쪽 여백 추가 */
+  }
+  
+  footer .footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px; /* 글자 크기 */
+  }
+  
+  footer p {
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    padding-left: 20px; /* 왼쪽 여백 추가 */
+    margin-top: 0;
+    font-size: 12px;
+  }
+  
+/* 1.png와 2.png가 같은 방향으로 까딱거리는 애니메이션 */
+@keyframes tilt {
+    0% {
+      transform: rotate(0deg); /* 기본 위치 */
+    }
+    25% {
+      transform: rotate(-25deg); /* 왼쪽으로 45도 */
+    }
+    50% {
+      transform: rotate(0deg); /* 원래 위치로 복귀 */
+    }
+    75% {
+      transform: rotate(25deg); /* 오른쪽으로 45도 */
+    }
+    100% {
+      transform: rotate(0deg); /* 원래 위치로 복귀 */
+    }
+  }
+  
+  header .extra-image {
+    width: 10%; /* 이미지 크기를 원래 비율의 30%로 설정 */
+    height: auto; /* 비율 유지 */
+    animation: tilt 2s infinite ease-in-out; /* 애니메이션 적용 */
+  }
+  
+  
+  
+  

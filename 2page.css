@@ -1,0 +1,119 @@
+/* 전체 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    overflow-x: hidden; /* 좌우 스크롤 방지 */
+  }
+  
+  /* 헤더 */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 왼쪽 정렬 */
+    padding: 60px;
+    background-color: #FF3C00;
+  }
+  
+  header .header-content {
+    display: flex; /* 플렉스박스를 사용하여 요소를 한 줄로 정렬 */
+    align-items: center; /* 요소의 세로 방향 정렬 */
+    gap: 20px; /* 로고, 이미지, 텍스트 사이 간격 */
+  }
+  
+  header .logo-image {
+    position: absolute; /* 절대 위치 지정 */
+    top: 20px; /* 화면 상단에서 20px 떨어짐 */
+    left: 20px; /* 화면 왼쪽에서 20px 떨어짐 */
+    width: 200px; /* 로고 크기 조정 */
+    height: auto;
+  }
+  
+  header .description {
+    position: absolute; /* 절대 위치 지정 */
+    top: 30px;
+    right: 30px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+  }
+  
+  /* Title과 설명을 분리 */
+  .content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: left;
+    width: 30%; /* 왼쪽 영역 크기 */
+  }
+  
+  .divider {
+    width: 3px;
+    height: 100%;
+    background-color: #000;
+    margin: 0 20px;
+  }
+  
+  .description-content {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-right: 20px;
+    width: 60%; /* 오른쪽 영역 크기 */
+    text-align: left;
+  }
+  
+  /* 이미지 컨테이너 */
+  .images-container {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 40px)); /* 가로 2개, 좌우 40px 마진 */
+    gap: 20px 0; /* 세로 20px 여백, 가로 여백 없음 */
+    justify-content: center; /* 이미지를 중앙 정렬 */
+    padding: 0 40px; /* 좌우 마진 40px */
+  }
+  
+  /* 이미지 크기 조정 */
+  .image {
+    width: 100%; /* 부모 컨테이너 너비에 맞게 */
+    height: auto; /* 원본 비율 유지 */
+  }
+  
+  /* Previous 텍스트 */
+  .previous-link {
+    text-align: left; /* 왼쪽 정렬 */
+    margin-top: 20px; /* 이미지와의 간격 */
+    margin-left: 40px; /* 왼쪽 간격 설정 */
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000; /* 기본 검정색 글씨 */
+  }
+  
+  .previous-link a {
+    color: inherit; /* 부모 색상 상속 (검정) */
+    text-decoration: none; /* 밑줄 제거 */
+  }
+  
+  .previous-link a:hover {
+    color: #FF3C00; /* 호버 시 주황색으로 변경 */
+    text-decoration: underline; /* 호버 시 밑줄 표시 */
+    cursor: pointer; /* 클릭 가능한 커서 */
+  }
+  
+  /* 페이지 하단 여백 */
+  body {
+    padding-bottom: 50px; /* 페이지 하단 여백 */
+  }
+  
+  
+  
+  
+  
